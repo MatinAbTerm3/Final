@@ -1,0 +1,89 @@
+<?php
+include 'security/Authentication.php';
+include 'security/Authorization.php';
+include 'security/Validation.php';
+include 'form/Form.php';
+include 'DB.php';
+include 'Inputs.php';
+
+if(! function_exists('get_header'))
+{
+    function get_header($name = '')
+    {
+		if(! empty($name))
+		{
+			$name = "-{$name}";
+		}
+		include "view/templates/header{$name}.php";
+    }
+}
+if(! function_exists('get_sidebar'))
+{
+    function get_sidebar($name = '')
+    {
+		if(! empty($name))
+		{
+			$name = "-{$name}";
+		}
+		include "view/templates/sidebar{$name}.php";
+    }
+}
+if(! function_exists('get_footer'))
+{
+    function get_footer($name = '')
+    {
+		if(! empty($name))
+		{
+			$name = "-{$name}";
+		}
+		include "view/templates/footer{$name}.php";
+    }
+}
+if(! function_exists('get_template_part'))
+{
+    function get_template_part($slug , $name = '' , $args = array())
+    {
+       if(! empty($name))
+		{
+			$name = "-{$name}";
+		}
+		$row = $args;		
+		include "view/templates/{$slug}{$name}.php";
+    }
+}
+
+
+if(! function_exists('alertTemplate'))
+{
+    function alertTemplate($text,$type)
+    {
+        $alert ="
+            <article class = 'alert alert-{$type} alert-dismissible fade show' role='alert'>
+                {$text}
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>    
+            </articale>";
+        return $alert;
+    }
+}
+
+
+if(! function_exists('redirect'))
+{
+    function redirect($address)
+    {
+        header("Location: {$address}");
+        exit();
+    }
+}
+
+/*function mySessionStarter()
+{
+	if(session_status() !== PHP_SESSION_ACTIVE)
+	{
+		session_set_cookie_params($lifetime = 30 * 24 * 60 * 60 , $path = '/' , $domain = $_SERVER['HTTP_HOST'] 
+		, $secure = false , $httponly = true );
+		session_start();
+	}
+}
+*/
+?>
