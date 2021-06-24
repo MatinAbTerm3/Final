@@ -13,7 +13,7 @@
 <header>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"><img src="assets/images/icon.png" alt="لوگو" width="45" height="48" class="d-inline-block align-top"></a>
+                    <a class="navbar-brand" href="index.php"><img src="assets/images/icon.png" alt="لوگو" width="45" height="48" class="d-inline-block align-top"></a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
@@ -26,13 +26,13 @@
                         </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="<?php echo SITE_URL; ?>index.html">خانه</a>
+                            <a class="nav-link active" aria-current="page" href="<?php echo SITE_URL; ?>index.php">خانه</a>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link" href="<?php echo SITE_URL; ?>catalog.php" >کتاب ها</a>
+                                <a class="nav-link" href="<?php echo SITE_URL; ?>showProduct.php" >کتاب ها</a>
                             </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo SITE_URL; ?>contactus.html" >تماس با ما</a>
+                            <a class="nav-link" href="<?php echo SITE_URL; ?>contac_tus.php" >تماس با ما</a>
                         </li>
                     </ul>
             </div>
@@ -54,7 +54,7 @@
         </div>
         
         <input type = "submit" value = "ورود" class = "btn btn-primary" name = "submit">
-        <a href = 'register.html' class = 'btn btn-link'> ثبت نام</a>
+        <a href = 'register.php' class = 'btn btn-link'> ثبت نام</a>
     </form>
 </main>
 
