@@ -17,6 +17,6 @@ else
 	$alert = alertTemplate('شناسه کاربری نامشخص!' , 'danger');
 	echo $alert;
 }
-header("Location: index.html");
+header("Location: index.php");
 exit();
 ?>
