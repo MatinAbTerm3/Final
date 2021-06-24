@@ -19,7 +19,7 @@ echo "
 						.$row['description']."
 					</p>
 					<a href = 'editProduct.php?id={$row['id']}' class = 'btn btn-primary'>ویرایش</a>
-					<a href = '#' class = 'btn btn-danger'>حذف</a>
+					<a href = 'deleteProduct.php?id={$row['id']}' class = 'btn btn-danger'>حذف</a>
 					<a class = 'btn far fa-heart' href = 'likeProduct.php?id={$row['id']}'></a>
 				</section>
 			</section>
